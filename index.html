@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehrwertsteuer-Rechner</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <main>
+        <h1>Mehrwertsteuer-Rechner</h1>
+        <section>
+            <article>
+                <form>
+                    <div>
+                        <h2>Was soll berechnet werden?</h2>
+                        <input type="radio" value="nettoBrutto" id="nettoBrutto" name="q1" checked="checked"
+                            onchange="change1()">
+                        <label for="nettoBrutto">Mehrwertsteuer aufschlagen (Netto zu Brutto)</label><br>
+                        <input type="radio" value="bruttoNetto" id="bruttoNetto" name="q1" onchange="change1()">
+                        <label for="bruttoNetto">Mehrwertsteuer abziehen (Brutto zu Netto)</label>
+                    </div>
+                    <div>
+                        <h2>Mehrwertsteuersatz</h2>
+                        <input type="radio" value="19prozent" id="19prozent" name="q2" checked="checked">
+                        <label for="19prozent">19 %</label>
+                        <input type="radio" value="7prozent" id="7prozent" name="q2">
+                        <label for="7prozent">7 %</label>
+                    </div>
+                    <div>
+                        <h2 id="change1">
+                        </h2>
+                        <input type="text" id="euroInput" placeholder="10,00">
+                        <label for="euroInput">€</label>
+                    </div>
+                    <input type="button" value="BERECHNEN" onclick="berechnen(event)">
+                </form>
+            </article>
+            <article>
+                <h3>Ergebnis</h3>
+                <div>
+                    <h2>Mehrwertsteuerbetrag</h2>
+                    <p id="mwstBetrag">no output</p>
+                </div>
+                <div>
+                    <h2 id="change2">Bruttobetrag (Endpreis)</h2>
+                    <p id="Betrag">no output</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

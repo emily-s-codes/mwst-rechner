@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+h1 {
+    font-size: 2rem;
+    padding: 10px;
+}
+
+h2 {
+    font-size: 1.6rem;
+    padding: 10px;
+}
+
+h3,
+p {
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+form {
+    padding: 10px;
+}
