@@ -27,7 +27,11 @@ function change1() {
 
 change1();
 
-function berechnen() {
+
+
+
+function berechnen(event) {
+    event.preventDefault;
     const nineteen = document.getElementById("19prozent").checked;
     console.log(nineteen)
 
@@ -53,23 +57,25 @@ function berechnen() {
 
     const nettoBrutto = document.getElementById("nettoBrutto").checked;
 
-
     const bruttoNetto = document.getElementById("bruttoNetto").checked;
 
+    const nettoMwst19 = Number(inputUse - (inputUse / 1.19)).toFixed(2);
+    const nettoMwst7 = Number(inputUse - (inputUse / 1.07)).toFixed(2);
+
     if (nineteen == true && nettoBrutto == true) {
-        output3.innerHTML = Number(inputUse * 0.19).toFixed(2) + " €";
-        output4.innerHTML = Number(inputNumber + output19result).toFixed(2) + " €";
+        output3.innerHTML = (Number(inputUse * 0.19).toFixed(2) + " €").replace(".", ",");
+        output4.innerHTML = (Number(inputUse + output19result).toFixed(2) + " €").replace(".", ",");
     } else if (nineteen != true && nettoBrutto == true) {
-        output3.innerHTML = Number(inputUse * 0.07).toFixed(2) + " €";
-        output4.innerHTML = Number(inputNumber + output7result).toFixed(2) + " €";
-        // } else if (nineteen == true && nettoBrutto == false) {
-        //     output3.innerHTML = Number(inputUse - (inputUse * 0.19)).toFixed(2) + " €";
-        //     output4.innerHTML = Number(inputNumber + output19result).toFixed(2) + " €";
-        // }
+        output3.innerHTML = (Number(inputUse * 0.07).toFixed(2) + " €").replace(".", ",");
+        output4.innerHTML = (Number(inputUse + output7result).toFixed(2) + " €").replace(".", ",");
+    } else if (nineteen == true && nettoBrutto != true) {
+        output3.innerHTML = (nettoMwst19 + " €").replace(".", ",");
+        output4.innerHTML = (Number(inputUse - nettoMwst19).toFixed(2) + " €").replace(".", ",");
+    } else if (nineteen != true && nettoBrutto != true) {
+        output3.innerHTML = (nettoMwst7 + " €").replace(".", ",");
+        output4.innerHTML = (Number(inputUse - nettoMwst7).toFixed(2) + " €").replace(".", ",");
     } else {
         output3.innerHTML = "error";
         output4.innerHTML = "error";
     }
 }
-
-

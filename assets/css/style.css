@@ -5,7 +5,8 @@
     font-size: 10px;
 }
 
-h1 {
+h1,
+h3 {
     font-size: 2rem;
     padding: 10px;
 }
@@ -15,12 +16,67 @@ h2 {
     padding: 10px;
 }
 
-h3,
-p {
-    font-size: 1.2rem;
+p,
+label {
+    font-size: 1.4rem;
+}
+
+
+/* ======================
+    MAIN STYLES 
+========================*/
+
+main section {
+    background-color: #2A0944;
+    color: #FEC260;
+    padding: 10px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto;
+    border-radius: 10px;
+
+}
+
+main section form,
+main section article {
+    margin: 10px;
+    border: 2px solid #3FA796;
+    border-radius: 5px;
+}
+
+main section form div {
+    margin: 0 10px;
+}
+
+main section form div label {
     padding: 10px;
 }
 
-form {
-    padding: 10px;
+main section form div input#euroInput {
+    padding: 5px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+main section form input[type=button] {
+    background-color: #A10035;
+    color: #FEC260;
+    font-size: 1.2rem;
+    margin: 5px 10px;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+main article div {
+    padding: 10px 0;
+}
+
+main article div p {
+    display: inline;
+    background-color: white;
+    color: #2A0944;
+    margin: 0 10px;
+    padding: 2px 10px;
 }
