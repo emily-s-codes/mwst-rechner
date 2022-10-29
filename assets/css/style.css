@@ -28,7 +28,7 @@ label {
 
 main section {
     background-color: #2A0944;
-    color: #FEC260;
+    color: #3FA796;
     padding: 10px;
     width: 60%;
     display: flex;
@@ -41,7 +41,7 @@ main section {
 main section form,
 main section article {
     margin: 10px;
-    border: 2px solid #3FA796;
+    border: 2px solid #FEC260;
     border-radius: 5px;
 }
 
@@ -61,7 +61,7 @@ main section form div input#euroInput {
 
 main section form input[type=button] {
     background-color: #A10035;
-    color: #FEC260;
+    color: #3FA796;
     font-size: 1.2rem;
     margin: 5px 10px;
     padding: 5px 20px;
